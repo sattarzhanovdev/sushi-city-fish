@@ -1,0 +1,21 @@
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .recomendations{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .cards{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 85px;
+      padding: 0 35px;
+      margin-top: 100px;
+      @media (max-width: 1020px) {
+        justify-content: center;
+      }
+    }
+  }
+}
