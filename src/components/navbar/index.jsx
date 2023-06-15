@@ -3,8 +3,26 @@ import c from './navbar.module.scss'
 import { Link } from 'react-router-dom'
 import { NavList } from '../../utils'
 import { FaBars } from 'react-icons/fa'
+import Cart from '../cart'
 
 const Navbar = () => {
+  const [modalCart, setModalCart] = React.useState(false)
+  const [dep, setDep] = React.useState('0')
+  const [cartCount, setCartCount] = React.useState(0)
+  const cart = JSON.parse(localStorage.getItem('cart'))
+
+  const getCart = () => {
+    const cart = JSON.parse(localStorage.getItem('cart'))
+    cart && setCartCount(cart.length)
+  }
+  
+  React.useEffect(() => {
+    getCart()
+    setTimeout(() => {
+      setDep(Math.random())
+    }, 100)
+  }, [dep])
+
   return (
     <div className={c.container}>  
       <div className={c.navbar}>
@@ -28,10 +46,10 @@ const Navbar = () => {
           }
         </ul>
         <div className={c.right}>
-          <ul className={c.shopping_cart}>
+          <ul className={c.shopping_cart} onClick={() => setModalCart(prev => !prev)}>
             <li>
               <p>
-                1
+                {cartCount}
               </p>
               <img 
                 src="/icons/shopping cart.svg" 
@@ -56,6 +74,9 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+      {
+        modalCart && <Cart/>
+      }
     </div>
   )
 }

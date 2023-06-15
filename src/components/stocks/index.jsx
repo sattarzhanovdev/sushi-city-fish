@@ -3,11 +3,12 @@ import c from './stocks.module.scss'
 import { Components } from '..'
 import {Swiper, SwiperSlide} from "swiper/react";
 import { Navigation } from "swiper";
+import Slide from './slide';
+import { slidelist } from '../../utils';
 
 import "swiper/css";
 import "swiper/css/navigation"; 
-import Slide from './slide';
-import { slidelist } from '../../utils';
+
 
 const Stocks = () => {
   return (

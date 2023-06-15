@@ -5,6 +5,10 @@ import { Route, Routes } from 'react-router-dom'
 import { Pages } from './pages'
 
 const App = () => {
+  React.useEffect(() => {
+    const cart = localStorage.getItem('cart')
+    !cart && localStorage.setItem('cart', JSON.stringify([]))
+  }, [])
   return (
     <div>
       <header>

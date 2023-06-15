@@ -2,12 +2,23 @@ import React from 'react'
 import c from './Card.module.scss'
 
 const Card = ({id, title, img, desc, price, mass}) => {
+
   const cart = JSON.parse(localStorage.getItem('cart'))
   const check = cart?.find(item => item?.id === id)
   const index = cart?.findIndex(obj => obj.id === id);
 
+  //  React.useEffect(() => {
+  //   setTimeout(() => {
+  //     const check = cart?.find(item => item?.id === obj?.id)
+  //     check ? setActive(true) : setActive(false)
+  //     setDep(Math.random())
+  //   }, 100)
+  // }, [dep])
+
   const postToCart = () => {
-    !check ? cart?.push({id: 1, title: title, desc: desc, mass: mass, price: price, count: 1, image: img}) : cart[index].count = cart[index].count + 1;
+    const cart = JSON.parse(localStorage.getItem('cart'))
+    !check ? cart?.push({id: 1, title: title, desc: desc, mass: mass, price: price, count: 1, image: img}) 
+    : cart[index].count = cart[index]?.count + 1;
     localStorage.setItem('cart', JSON.stringify(cart))
   }
 
