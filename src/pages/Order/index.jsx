@@ -6,7 +6,6 @@ import { useForm } from 'react-hook-form'
 import { api } from '../../config'
 
 const Order = () => {
-  const [formData, setFormData] = React.useState(null)
   const cart = JSON.parse(localStorage.getItem('cart'))
   React.useEffect(() => scrollTop(), [])
 
@@ -20,15 +19,14 @@ const Order = () => {
   } = useForm()
 
   const handle = (data) => {
-    setFormData({
+
+    api.PostOrder({
       cart,
       date: formattedDate,
       time: `${date.getHours()}:${date.getMinutes()}`,
       ...data,
       status: 'в ожидании',
-    })
-
-    api.PostOrder(formData).then(r => console.log(r))
+    }).then(r => console.log(r))
 
     reset()
   }
