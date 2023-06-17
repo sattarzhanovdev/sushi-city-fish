@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import c from './navbar.module.scss'
-import { Link } from 'react-router-dom'
+import { Link, NavLink, useParams } from 'react-router-dom'
 import { NavList } from '../../utils'
 import { FaBars } from 'react-icons/fa'
 import Cart from '../cart'
+import { useStateContext } from '../../helpers'
 
 const Navbar = () => {
-  const [modalCart, setModalCart] = React.useState(false)
   const [dep, setDep] = React.useState('0')
   const [cartCount, setCartCount] = React.useState(0)
-  const cart = JSON.parse(localStorage.getItem('cart'))
+  const {activeCart, setActiveCart} = useStateContext()
 
   const getCart = () => {
     const cart = JSON.parse(localStorage.getItem('cart'))
@@ -22,6 +22,7 @@ const Navbar = () => {
       setDep(Math.random())
     }, 100)
   }, [dep])
+
 
   return (
     <div className={c.container}>  
@@ -40,13 +41,15 @@ const Navbar = () => {
           {
             NavList.map(item => (
               <li key={item.id}>
-                {item.title}
+                <NavLink to={item.route}>
+                  {item.title}
+                </NavLink>
               </li>
             ))
           }
         </ul>
         <div className={c.right}>
-          <ul className={c.shopping_cart} onClick={() => setModalCart(prev => !prev)}>
+          <ul className={c.shopping_cart} onClick={() => setActiveCart(prev => !prev)}>
             <li>
               <p>
                 {cartCount}
@@ -75,7 +78,7 @@ const Navbar = () => {
         </ul>
       </div>
       {
-        modalCart && <Cart/>
+        activeCart && <Cart/>
       }
     </div>
   )

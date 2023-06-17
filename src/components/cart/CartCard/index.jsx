@@ -37,11 +37,11 @@ const CartCard = ({item, title, count, image, price}) => {
       </div>
       <div className={c.card_count}>
         <AiOutlineMinus onClick={decrement}/>
-          <span>{count}</span>
-          <AiOutlinePlus onClick={increment}/>
+        <span>{count}</span>
+        <AiOutlinePlus onClick={increment}/>
       </div>
       <div className={c.total}>
-        {price}
+        {price * count}
       </div>
     </div>
   )

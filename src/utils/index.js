@@ -8,7 +8,7 @@ export const CategoriesList = [
 ]
 
 export const NavList = [
-  {id: 1, title: 'Главная'},
+  {id: 1, title: 'Главная', route: '/'},
   {id: 2, title: 'Рекомендации'},
   {id: 3, title: 'Меню'},
   {id: 4, title: 'Акции'},

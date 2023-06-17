@@ -8,13 +8,20 @@ body{
   margin: 0;
   background: #FBFBFB;
   padding-top: 150px ;
+  box-sizing: border-box;
 }
 
 ul, li{
   list-style: none;
 }
 
-button{
+input, button{
   border: none;
   outline: none;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+  font-size: inherit;
 }
