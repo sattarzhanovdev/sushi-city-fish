@@ -41,7 +41,7 @@ const CartCard = ({item, title, count, image, price}) => {
         <AiOutlinePlus onClick={increment}/>
       </div>
       <div className={c.total}>
-        {price * count}
+        {price * count} руб
       </div>
     </div>
   )
