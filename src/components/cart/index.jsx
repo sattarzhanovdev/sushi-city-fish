@@ -1,6 +1,5 @@
 import React from 'react'
 import c from './cart.module.scss'
-
 import CartCard from './CartCard'
 import { useNavigate } from 'react-router-dom'
 import { useStateContext } from '../../helpers'
@@ -12,10 +11,12 @@ const Cart = () => {
   const {setActiveCart} = useStateContext()
   const navigate = useNavigate()
   
+
   const toOrder = () => {
     navigate('/order')
     setActiveCart(false)
   }
+  
   const getCart = () => {
     const cart = JSON.parse(localStorage.getItem('cart'))
     cart && setData(cart)
@@ -30,8 +31,8 @@ const Cart = () => {
     setTimeout(() => {
       setDep(Math.random())
     }, 100)
+    
   }, [dep])
-
 
   return (
     <div className={c.cart}>
@@ -48,16 +49,19 @@ const Cart = () => {
           </li>
         </ul>
         {
-          data?.length >= 1 ? 
+          data?.length > 0 ? 
           data.map((item, id) => (
             <CartCard {...item} item={item} key={id}/>
-          )) : 'empty'
+          )) : <span>Корзина пустая</span>
         }
         <div className={c.total_price}>
           Итого: {totalPrice} руб
         </div>
         <div className={c.pay_btn}>
-          <button onClick={toOrder}>
+          <button 
+            onClick={toOrder}
+            disabled={data?.length > 0 ? false : true}
+          >
             Оплатить
           </button>
         </div>
