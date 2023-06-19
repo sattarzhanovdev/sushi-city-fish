@@ -41,6 +41,10 @@
         border: 1px solid #ED342C;
         cursor: pointer;
         border-radius: 10px;
+        &:disabled{
+          opacity: .7;
+          border-color: gray;
+        }
       }
     }
   }
