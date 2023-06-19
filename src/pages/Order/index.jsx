@@ -7,6 +7,7 @@ import { api } from '../../config'
 import useAlert from '../../components/hooks/useAlert'
 import OrderWaiting from '../../components/orderWaiting'
 import OrderInWay from '../../components/OrderInWay'
+import OrderAccepted from '../../components/OrderAccepted'
 
 const Order = () => {
   const [refresh, setRefresh] = React.useState(null)
@@ -44,7 +45,7 @@ const Order = () => {
       localStorage.setItem('cart', JSON.stringify([]))
     })
 
-    setRefresh('update')
+    setRefresh(prev => prev + 1)
     reset()
   }
 
@@ -56,11 +57,13 @@ const Order = () => {
       r.data.status === 'в ожидании' 
         ? setActiveOrder('wait'):
         r.data.status === 'Передано курьеру'
-        ? setActiveOrder('way') : setActiveOrder('done')
+        ? setActiveOrder('way') : 
+        r.data.status === 'Принято' 
+        ? setActiveOrder('accepted') : setActiveOrder('done')
       )
     setTimeout(() => {
       setRefresh(Math.random())
-    }, 300000)
+    }, 60000)
   }, [refresh])
 
 
@@ -70,6 +73,7 @@ const Order = () => {
     <div className={c.order}>
       <Components.Title text={'Оформление заказа'}/>
       {
+        activeOrder === 'accepted' ? <OrderAccepted setState={setActiveOrder}/> :
         activeOrder === 'wait' ? <OrderWaiting setState={setActiveOrder} /> : 
         activeOrder === 'way' ? <OrderInWay setState={setActiveOrder}/> :
           <div className={c.container}>
