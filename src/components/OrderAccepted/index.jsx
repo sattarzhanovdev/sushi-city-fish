@@ -19,7 +19,7 @@ const OrderAccepted = ({setState}) => {
   return (
     <div className={c.state}>
       <h2>
-        Ваш заказ в принят
+        Ваш заказ принят
       </h2>
       <div className={c.state_btn}>
         <button onClick={cancelOrder}>Отменить заказ</button>
