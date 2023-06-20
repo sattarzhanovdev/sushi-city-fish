@@ -23,7 +23,7 @@ const OrderInWay = ({setState}) => {
         Ваш заказ в пути
       </h2>
        <div className={c.state_btn}>
-        <button onClick={successOrder}>Получил заказ</button>
+        <button onClick={successOrder}>Получил(-a) заказ</button>
       </div>
     </div>
   )

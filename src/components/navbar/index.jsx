@@ -1,8 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import c from './navbar.module.scss'
-import { Link, NavLink, useParams } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { NavList } from '../../utils'
-import { FaBars } from 'react-icons/fa'
 import Cart from '../cart'
 import { useStateContext } from '../../helpers'
 
@@ -71,10 +70,16 @@ const Navbar = () => {
             </p>
           </ul>
         </div>
-        <ul className={c.bars}>
+        <ul className={c.shopping_cart_layout} onClick={() => setActiveCart(prev => !prev)}>
           <li>
-            <FaBars />
-          </li>
+              <p>
+                {cartCount}
+              </p>
+              <img 
+                src="/icons/shopping cart.svg" 
+                alt="shopping cart"
+              />
+            </li>
         </ul>
       </div>
       {

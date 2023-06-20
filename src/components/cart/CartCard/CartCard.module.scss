@@ -16,11 +16,17 @@
         }
         p{
           width: 125px;
+          @media (max-width: 395px) {
+            width: 100px;
+          }
         }
       }
       .card_count{
         display: flex;
         gap: 15px;
+        @media (max-width: 375px) {
+          gap: 5px;
+        }
         span{
           padding: 6px;
           font-size: 12px;
