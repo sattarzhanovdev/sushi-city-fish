@@ -71,7 +71,11 @@ const Order = () => {
 
   return (
     <div className={c.order}>
-      <Components.Title text={'Оформление заказа'}/>
+      {
+        activeOrder === false 
+        ?  <Components.Title text={'Оформление заказа'}/>
+        : <Components.Title text={'Статус заказа'}/>
+      }
       {
         activeOrder === 'accepted' ? <OrderAccepted setState={setActiveOrder}/> :
         activeOrder === 'wait' ? <OrderWaiting setState={setActiveOrder} /> : 
