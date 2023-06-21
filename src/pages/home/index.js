@@ -4,11 +4,10 @@ import { Components } from '../../components'
 const Home = () => {
   return (
     <div>
-      {/* <div id='stocks'></div> */}
       <Components.Stocks />
-      <div style={{ height: '150px' }} id='recomendation'></div>
+      <div className='btwn_components' style={{ height: '150px' }} id='recomendation'></div>
       <Components.Recomendations />
-      <div style={{ height: '150px' }} id='menu'></div>
+      <div className='btwn_components'  style={{ height: '150px' }} id='menu'></div>
       <Components.Menu />
     </div>
   )

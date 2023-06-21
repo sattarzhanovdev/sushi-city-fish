@@ -29,3 +29,9 @@ a{
   text-decoration: none;
   font-size: inherit;
 }
+
+.btwn_components{
+  @media (max-width: 920px) {
+    display: none;
+  }
+}
