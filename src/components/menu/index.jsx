@@ -15,7 +15,7 @@ const Menu = () => {
 
   console.log(data);
   return (
-    <div className={c.container}>
+    <div className={c.container} id='menu'>
       <div className={c.menu}>
         <Components.Title 
           text={"Меню"}

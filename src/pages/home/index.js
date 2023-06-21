@@ -4,10 +4,9 @@ import { Components } from '../../components'
 const Home = () => {
   return (
     <div>
-      <Components.Banner />
+      <Components.Stocks />
       <Components.Recomendations />
       <Components.Menu />
-      <Components.Stocks />
     </div>
   )
 }

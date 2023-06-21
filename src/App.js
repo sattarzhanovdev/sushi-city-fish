@@ -26,6 +26,7 @@ const App = () => {
             element={<Pages.Home />}
           />
           <Route path='/order' element={<Pages.Order/>}/>
+          <Route path='/product/:id' element={<Pages.More />} />
         </Routes>
       </main>
 

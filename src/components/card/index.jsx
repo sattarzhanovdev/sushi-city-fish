@@ -1,22 +1,16 @@
 import React from 'react'
 import c from './Card.module.scss'
+import { useNavigate } from 'react-router-dom'
 
 const Card = ({id, title, img, desc, price, mass}) => {
 
-  
+  const navigate = useNavigate()
 
-  //  React.useEffect(() => {
-  //   setTimeout(() => {
-  //     const check = cart?.find(item => item?.id === obj?.id)
-  //     check ? setActive(true) : setActive(false)
-  //     setDep(Math.random())
-  //   }, 100)
-  // }, [dep])
-;
   const postToCart = () => {
     const cart = JSON.parse(localStorage.getItem('cart'))
     const check = cart?.find(item => item.id === id)
     const index = cart?.findIndex(obj => obj.id === id);
+
     
     !check ? cart?.push({id, title, desc,  mass, price, count: 1, image: img}) 
     : cart[index].count = cart[index]?.count + 1;
@@ -25,13 +19,13 @@ const Card = ({id, title, img, desc, price, mass}) => {
 
   return (
     <div className={c.card}>
-      <div className={c.image}>
+      <div className={c.image} onClick={() => navigate(`product/${id}`)}>
         <img 
           src={img} 
           alt={title}
         />
       </div>
-      <h3>{title}</h3>
+      <h3 onClick={() => navigate(`product/${id}`)}>{title}</h3>
       <p>{desc?.length > 80 ? `${desc?.slice(0, 80)}...` : desc}</p>
       <div className={c.down}>
         <div className={c.left}>
