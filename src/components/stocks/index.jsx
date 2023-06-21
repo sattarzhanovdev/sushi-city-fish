@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 
 const Stocks = () => {
   return (
-    <div className={c.container} id='stocks'>
+    <div className={c.container}>
       <div className={c.stocks}>
         <Components.Title
           text={'Акции'}

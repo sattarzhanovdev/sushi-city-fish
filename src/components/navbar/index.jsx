@@ -3,10 +3,11 @@ import c from './navbar.module.scss'
 import { Link, NavLink } from 'react-router-dom'
 import { NavList } from '../../utils'
 import Cart from '../cart'
-import { useStateContext } from '../../helpers'
+import { scrollTop, useStateContext } from '../../helpers'
 
 const Navbar = () => {
   const [dep, setDep] = React.useState('0')
+  const [top, setTop] = React.useState(false)
   const [cartCount, setCartCount] = React.useState(0)
   const {activeCart, setActiveCart} = useStateContext()
 
@@ -21,6 +22,10 @@ const Navbar = () => {
       setDep(Math.random())
     }, 100)
   }, [dep])
+
+  React.useEffect(() => {
+    scrollTop()
+  }, [top])
 
 
   return (
@@ -45,7 +50,7 @@ const Navbar = () => {
           {
             NavList.map(item => (
               <li key={item.id}>
-                <a href={item.route}>
+                <a href={item.route} onClick={() => item.id === 3 && scrollTop()}>
                   {item.title}
                 </a>
               </li>
