@@ -21,9 +21,19 @@
 
   .container {
     padding: 32px 50px;
+    position: relative;
 
     @media (max-width: 1105px) {
       padding: 20PX 30PX;
+    }
+    .cross{
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+      svg{
+        font-size: 26px;
+      }
     }
 
     .cart_titles {

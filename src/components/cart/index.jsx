@@ -3,6 +3,7 @@ import c from './cart.module.scss'
 import CartCard from './CartCard'
 import { useNavigate } from 'react-router-dom'
 import { useStateContext } from '../../helpers'
+import {RxCross2} from 'react-icons/rx'
 
 const Cart = () => {
   const [data, setData] = React.useState(null)
@@ -37,6 +38,9 @@ const Cart = () => {
   return (
     <div className={c.cart}>
       <div className={c.container}>
+        <span className={c.cross} onClick={() => setActiveCart(false)}>
+          <RxCross2/>
+        </span>
         <ul className={c.cart_titles}>
           <li>
             Название

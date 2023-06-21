@@ -3,8 +3,8 @@ import { CategoriesList } from '../../utils'
 import c from './categories.module.scss'
 
 
-const Categories = () => {
-  const [ category, setCategory ] = React.useState(1)
+const Categories = ({setCategory, category}) => {
+  
 
   return (
     <div className={c.container}>
@@ -13,8 +13,8 @@ const Categories = () => {
           CategoriesList.map(item => (
             <div
               key={item.id}
-              className={category === item.id ? c.active : c.category}
-              onClick={() => setCategory(item.id)}
+              className={category === item.title ? c.active : c.category}
+              onClick={() => setCategory(item.title)}
             >
               <img 
                 src={category === item.id ? item.activeIcon : item.icon}
