@@ -4,7 +4,7 @@ import { Components } from '..'
 
 const Recomendations = () => {
   return (
-    <div className={c.container}>
+    <div className={c.container} id='recomendation'>
       <div className={c.recomendations}>
         <Components.Title 
           text={'Рекомендации'}

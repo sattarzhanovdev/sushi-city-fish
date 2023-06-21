@@ -37,12 +37,17 @@ const Navbar = () => {
           </li>
         </ul>
         <ul className={c.list}>
+          <li>
+            <NavLink to={'/'}>
+              Главная
+            </NavLink>
+          </li>
           {
             NavList.map(item => (
               <li key={item.id}>
-                <NavLink to={item.route}>
+                <a href={item.route}>
                   {item.title}
-                </NavLink>
+                </a>
               </li>
             ))
           }
