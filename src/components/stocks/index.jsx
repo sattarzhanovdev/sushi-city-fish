@@ -28,7 +28,7 @@ const Stocks = () => {
             slidelist.map(item => (
               <SwiperSlide key={item.id}>
                 <Slide 
-                  img={item.img}
+                  {...item}
                 />
               </SwiperSlide>
             ))
