@@ -143,6 +143,17 @@ const Order = () => {
                 })}
               />
             </label>
+            <label>
+              <span>Комментарий</span>
+              <textarea 
+                type="text" 
+                name='address'
+                className={errors.address && c.error_inp}
+                {...register('comment', {
+                  required: '⚠ Обязательное поле',
+                })}
+              />
+            </label>
           </form>
           <div className={c.order_btn}>
             <button 
