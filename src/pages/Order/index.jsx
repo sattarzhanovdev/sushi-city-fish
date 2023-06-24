@@ -125,9 +125,31 @@ const Order = () => {
               <span>Корпус</span>
               <input 
                 type="text" 
-                name='address'
+                name='corpus'
                 className={errors.address && c.error_inp}
                 {...register('corpus', {
+                  required: '⚠ Обязательное поле',
+                })}
+              />
+            </label>
+            <label>
+              <span>Подъезд</span>
+              <input 
+                type="text" 
+                name='doorway'
+                className={errors.address && c.error_inp}
+                {...register('doorway', {
+                  required: '⚠ Обязательное поле',
+                })}
+              />
+            </label>
+            <label>
+              <span>Этаж</span>
+              <input 
+                type="text" 
+                name='floor'
+                className={errors.address && c.error_inp}
+                {...register('floor', {
                   required: '⚠ Обязательное поле',
                 })}
               />
@@ -136,7 +158,7 @@ const Order = () => {
               <span>Квартира</span>
               <input 
                 type="text" 
-                name='address'
+                name='apart'
                 className={errors.address && c.error_inp}
                 {...register('apart', {
                   required: '⚠ Обязательное поле',
@@ -147,7 +169,7 @@ const Order = () => {
               <span>Комментарий</span>
               <textarea 
                 type="text" 
-                name='address'
+                name='comment'
                 className={errors.address && c.error_inp}
                 {...register('comment', {
                   required: '⚠ Обязательное поле',
