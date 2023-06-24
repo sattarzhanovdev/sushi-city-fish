@@ -1,3 +1,8 @@
+import banner1 from '../images/banner-1.jpg'
+import banner2 from '../images/banner-2.jpg'
+
+
+
 export const CategoriesList = [
   {id: 1, title: 'Супы', icon: '/icons/soup.png', activeIcon: '/icons/soup_active.png'},
   {id: 2, title: 'Поке', icon: '/icons/Noodles.png', activeIcon: '/icons/noodles_active.png'},
@@ -33,17 +38,17 @@ export const NavList = [
 export const slidelist = [
   {
     id: 1,
-    img: '/img/california.jpg',
+    img: banner1,
     text: 'Мы считаем, что то, как вы выглядите, и то, как вы себя чувствуете, неразрывно связано. Вот почему мы берем лучшее из науки и природы, чтобы создавать косметические продукты, персонализированные специально для вас!',
-    title: 'При заказе на 999 рублей калифорния роллы в подарок',
+    title: 'Закажите нашими вкусными блюдами на сумму 999 рублей и получите в подарок утонченные калифорния роллы!',
     backgroundColor: '#F6EEE8',
     color: '#a0663a',
   },
   {
     id: 2,
-    img: '/img/roll.jpg',
+    img: banner2,
     text: 'Дышите глубоко. Часто увлажняйте. Это твой дом, твое пространство. И вы хотите, чтобы он был чистым без ущерба для безопасности. Очистители воздуха, фильтрация воды, приготовление пищи и уборка. Да, у нас есть для вас.',
-    title: 'На вынос скидка 15%',
+    title: 'Скидка на самовывоз 20% все меню',
     backgroundColor: '#E5FDFE',
     color: '#396E75',
   },
