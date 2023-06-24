@@ -121,6 +121,28 @@ const Order = () => {
                 })}
               />
             </label>
+            <label>
+              <span>Корпус</span>
+              <input 
+                type="text" 
+                name='address'
+                className={errors.address && c.error_inp}
+                {...register('corpus', {
+                  required: '⚠ Обязательное поле',
+                })}
+              />
+            </label>
+            <label>
+              <span>Квартира</span>
+              <input 
+                type="text" 
+                name='address'
+                className={errors.address && c.error_inp}
+                {...register('apart', {
+                  required: '⚠ Обязательное поле',
+                })}
+              />
+            </label>
           </form>
           <div className={c.order_btn}>
             <button 
