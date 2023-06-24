@@ -4,6 +4,9 @@
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 870px) {
     height: 500px;
   }
@@ -18,13 +21,11 @@
     height: 650px;
   }
   .slide_text{
-    
     background-position: top;
-    position: absolute;
-    left: 40%;
-    transform: translateX(-50%);
-    top: 10%;
     color: white;
+    @media (max-width: 1024px){
+      margin-left: 50px;
+    }
     @media (max-width: 768px) {
       width: 100%;
     }
@@ -38,11 +39,18 @@
       background-color: #FF5B00;
       text-align: center;
       border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 1024px) {
+        background: none;
+        text-align: left;
+      }
       h2{
       font-size: 1.5rem;
-      position: absolute;
-      top: 45%;
-      transform: translateY(-50%);
+      width: 95%;
+      margin: 0;
+      
     }
     button{
       background-color: #396e75;
