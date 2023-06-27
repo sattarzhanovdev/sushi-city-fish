@@ -12,6 +12,12 @@ export const CategoriesList = [
   {id: 6, title: 'Роллы', icon: '/icons/rolls.png', activeIcon: '/icons/rolls_active.png'},
 ]
 
+export const rollsTypes = [
+  {id: 1, title: 'Классические роллы', icon: '/icons/rolls.png', activeIcon: '/icons/rolls_active.png'},
+  {id: 2, title: 'Запеченные роллы', icon: '/icons/rolls.png', activeIcon: '/icons/rolls_active.png'},
+  {id: 3, title: 'Жаренные роллы', icon: '/icons/rolls.png', activeIcon: '/icons/rolls_active.png'},
+]
+
 export const NavList = [
   { id: 1, title: 'Рекомендации', route: '#recomendation' },
   { id: 2, title: 'Меню', route: '#menu' },

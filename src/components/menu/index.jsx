@@ -41,6 +41,7 @@ const Menu = () => {
                 img={item.image}
                 price={item.price}
                 mass={item.mass}
+                typeMass={item.typeMass}
               />
             ))
           }
@@ -54,6 +55,7 @@ const Menu = () => {
                 img={item.image}
                 price={item.price}
                 mass={item.mass}
+                typeMass={item.typeMass}
               />
             ))
           }

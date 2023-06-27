@@ -9,7 +9,7 @@ export const objToArray = (obj, setData) => {
       ...item
     }
   })
-  setData(base)
+  setData(base.reverse())
 }
 
 export const scrollTop = () => {

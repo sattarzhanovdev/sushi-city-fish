@@ -1,5 +1,5 @@
 import React from 'react'
-import { CategoriesList } from '../../utils'
+import { CategoriesList, rollsTypes } from '../../utils'
 import c from './categories.module.scss'
 
 
@@ -25,6 +25,20 @@ const Categories = ({setCategory, category}) => {
           ))
         }
       </div>
+      {
+        category === 'Роллы' || category === 'Классические роллы' || category === 'Запеченные роллы' || category === 'Жаренные роллы' ?
+        <div className={c.rolls}>
+          <select onChange={e => setCategory(e.target.value === 'all' ? 'Роллы' : e.target.value)}>
+            <option value='all' selected>Все</option>              
+            {
+              rollsTypes.map(item => (
+                <option value={item.title} key={item.id}>{item.title}</option>              
+              ))
+            }
+          </select>
+        </div> : 
+        null
+      }
     </div>
   )
 }

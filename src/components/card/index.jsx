@@ -2,7 +2,7 @@ import React from 'react'
 import c from './Card.module.scss'
 import { useNavigate } from 'react-router-dom'
 
-const Card = ({id, title, img, desc, price, mass}) => {
+const Card = ({id, title, img, desc, price, mass, typeMass}) => {
 
   const navigate = useNavigate()
 
@@ -30,7 +30,7 @@ const Card = ({id, title, img, desc, price, mass}) => {
       <div className={c.down}>
         <div className={c.left}>
           <h3>{price} руб</h3>
-          <p>{mass} мл</p>
+          <p>{mass} {typeMass}</p>
         </div>
         <div className={c.right}>
           <button 

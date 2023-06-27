@@ -28,6 +28,7 @@ const Recomendations = () => {
                 img={item.image}
                 price={item.price}
                 mass={item.mass}
+                typeMass={item.typeMass}
               />
             ))
           }

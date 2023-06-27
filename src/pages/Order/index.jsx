@@ -166,6 +166,28 @@ const Order = () => {
               />
             </label>
             <label>
+              <span>Топпинг</span>
+              <input 
+                type="text" 
+                name='topping'
+                className={errors.topping && c.error_inp}
+                {...register('topping', {
+                  required: '⚠ Обязательное поле',
+                })}
+              />
+            </label>
+            <label>
+              <span>Приборы</span>
+              <input 
+                type="number" 
+                name='instruments'
+                className={errors.instruments && c.error_inp}
+                {...register('instruments', {
+                  required: '⚠ Обязательное поле',
+                })}
+              />
+            </label>
+            <label>
               <span>Комментарий</span>
               <textarea 
                 type="text" 

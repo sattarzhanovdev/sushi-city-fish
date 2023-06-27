@@ -2,6 +2,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   .categories{
     display: flex;
     justify-content: center;
@@ -34,6 +36,16 @@
       p{
         color: #ED342C;
       }
+    }
+  }
+  .rolls{
+    margin-top: 25px;
+    select{
+      width: 250px;
+      height: 45px;
+      padding: 0 15px;
+      border-radius: 15px;
+      outline: none;
     }
   }
 }
