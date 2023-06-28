@@ -26,12 +26,32 @@
     @media (max-width: 1105px) {
       padding: 20PX 30PX;
     }
-    .cross{
+
+    .scroll {
+      overflow-y: scroll;
+      height: 150px;
+      padding-right: 10px;
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #EAEAEA;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+
+    }
+
+    .cross {
       position: absolute;
       right: 0;
       top: 0;
       cursor: pointer;
-      svg{
+
+      svg {
         font-size: 26px;
       }
     }
@@ -45,6 +65,7 @@
 
       li:nth-child(1) {
         margin-right: 115px;
+
         @media (max-width: 375px) {
           margin-right: 85px;
         }

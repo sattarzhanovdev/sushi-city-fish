@@ -99,7 +99,14 @@ const Order = () => {
                 })}
               />
             </label>
+            
             <label>
+              {
+              Object.keys(errors).length > 0 && 
+                <span className={c.error_msg}>
+                  Заполните все поля!
+                </span>
+              }
               <span>Номер телефона</span>
               <input 
                 type="number" 
@@ -110,7 +117,14 @@ const Order = () => {
                 })}
               />
             </label>
+            
             <label>
+              {
+                Object.keys(errors).length > 0 && 
+                  <span className={c.error_msg}>
+                    Заполните все поля!
+                  </span>
+              }
               <span>Адрес</span>
               <input 
                 type="text" 
@@ -121,7 +135,14 @@ const Order = () => {
                 })}
               />
             </label>
+            
             <label>
+              {
+                Object.keys(errors).length > 0 && 
+                  <span className={c.error_msg}>
+                    Заполните все поля!
+                  </span>
+              }
               <span>Корпус</span>
               <input 
                 type="text" 
@@ -132,7 +153,14 @@ const Order = () => {
                 })}
               />
             </label>
+            
             <label>
+              {
+                Object.keys(errors).length > 0 && 
+                  <span className={c.error_msg}>
+                    Заполните все поля!
+                  </span>
+              }
               <span>Подъезд</span>
               <input 
                 type="text" 
@@ -143,7 +171,14 @@ const Order = () => {
                 })}
               />
             </label>
+          
             <label>
+              {
+                Object.keys(errors).length > 0 && 
+                  <span className={c.error_msg}>
+                    Заполните все поля!
+                  </span>
+              }
               <span>Этаж</span>
               <input 
                 type="text" 
@@ -154,7 +189,14 @@ const Order = () => {
                 })}
               />
             </label>
+            
             <label>
+              {
+                Object.keys(errors).length > 0 && 
+                  <span className={c.error_msg}>
+                    Заполните все поля!
+                  </span>
+              }
               <span>Квартира</span>
               <input 
                 type="text" 
@@ -165,7 +207,14 @@ const Order = () => {
                 })}
               />
             </label>
+            
             <label>
+              {
+                Object.keys(errors).length > 0 && 
+                  <span className={c.error_msg}>
+                    Заполните все поля!
+                  </span>
+              }
               <span>Топпинг</span>
               <input 
                 type="text" 
@@ -176,7 +225,14 @@ const Order = () => {
                 })}
               />
             </label>
+            
             <label>
+              {
+                Object.keys(errors).length > 0 && 
+                  <span className={c.error_msg}>
+                    Заполните все поля!
+                  </span>
+              }
               <span>Приборы</span>
               <input 
                 type="number" 
@@ -187,7 +243,14 @@ const Order = () => {
                 })}
               />
             </label>
+            
             <label>
+              {
+                Object.keys(errors).length > 0 && 
+                  <span className={c.error_msg}>
+                    Заполните все поля!
+                  </span>
+              }
               <span>Комментарий</span>
               <textarea 
                 type="text" 

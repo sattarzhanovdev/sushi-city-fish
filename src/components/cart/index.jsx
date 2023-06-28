@@ -52,12 +52,14 @@ const Cart = () => {
             Сумма
           </li>
         </ul>
-        {
-          data?.length > 0 ? 
-          data.map((item, id) => (
-            <CartCard {...item} item={item} key={id}/>
-          )) : <span>Корзина пустая</span>
-        }
+        <div className={data?.length >= 3 ? c.scroll : ''}>
+          {
+            data?.length > 0 ? 
+            data.map((item, id) => (
+              <CartCard {...item} item={item} key={id}/>
+            )) : <span>Корзина пустая</span>
+          }
+        </div>
         <div className={c.total_price}>
           Итого: {totalPrice} руб
         </div>
