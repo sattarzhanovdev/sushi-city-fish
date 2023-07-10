@@ -17,7 +17,7 @@ const Categories = ({setCategory, category}) => {
               onClick={() => setCategory(item.title)}
             >
               <img 
-                src={category === item.id ? item.activeIcon : item.icon}
+                src={category === item.title ? item.activeIcon : item.icon}
                 alt={item.title}
               />
               <p>{item.title}</p>

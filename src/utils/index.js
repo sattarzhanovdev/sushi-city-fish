@@ -10,6 +10,8 @@ export const CategoriesList = [
   {id: 4, title: 'Суши', icon: '/icons/sushi.png', activeIcon: '/icons/sushi_active.png'},
   {id: 5, title: 'Сеты', icon: '/icons/plate.png', activeIcon: '/icons/plate_active.png'},
   {id: 6, title: 'Роллы', icon: '/icons/rolls.png', activeIcon: '/icons/rolls_active.png'},
+  {id: 7, title: 'Напитки', icon: '/icons/drinks.png', activeIcon: '/icons/drinks_active.png'},
+  {id: 8, title: 'Топпинги', icon: '/icons/toppings.png', activeIcon: '/icons/toppings_active.png'},
 ]
 
 export const rollsTypes = [

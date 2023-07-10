@@ -26,10 +26,11 @@
           background-color: transparent;
         }
         textarea{
+          outline: none;
           height: 100px;
           border-bottom: 1px solid #000;
           font-size: 16px;
-          padding: 0;
+          padding: 10px;
           background-color: transparent;
         }
       }
