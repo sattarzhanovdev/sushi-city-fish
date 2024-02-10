@@ -63,7 +63,7 @@ const Order = () => {
       )
     setTimeout(() => {
       setRefresh(Math.random())
-    }, 60000)
+    }, 20000)
   }, [refresh])
 
 
@@ -203,24 +203,6 @@ const Order = () => {
                 name='apart'
                 className={errors.address && c.error_inp}
                 {...register('apart', {
-                  required: '⚠ Обязательное поле',
-                })}
-              />
-            </label>
-            
-            <label>
-              {
-                Object.keys(errors).length > 0 && 
-                  <span className={c.error_msg}>
-                    Заполните все поля!
-                  </span>
-              }
-              <span>Топпинг</span>
-              <input 
-                type="text" 
-                name='topping'
-                className={errors.topping && c.error_inp}
-                {...register('topping', {
                   required: '⚠ Обязательное поле',
                 })}
               />

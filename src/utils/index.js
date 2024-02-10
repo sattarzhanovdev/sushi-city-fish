@@ -4,12 +4,14 @@ import banner2 from '../images/banner-2.jpg'
 
 
 export const CategoriesList = [
-  { id: 1, title: 'Супы', icon: '/icons/soup.png', activeIcon: '/icons/soup_active.png' },
-  { id: 2, title: 'Поке', icon: '/icons/Noodles.png', activeIcon: '/icons/noodles_active.png' },
-  { id: 3, title: 'Вок', icon: '/icons/wok.png', activeIcon: '/icons/wok_active.png' },
-  { id: 4, title: 'Суши', icon: '/icons/sushi.png', activeIcon: '/icons/sushi_active.png' },
-  { id: 5, title: 'Сеты', icon: '/icons/plate.png', activeIcon: '/icons/plate_active.png' },
-  { id: 6, title: 'Роллы', icon: '/icons/rolls.png', activeIcon: '/icons/rolls_active.png' },
+  {id: 1, title: 'Супы', icon: '/icons/soup.png', activeIcon: '/icons/soup_active.png'},
+  {id: 2, title: 'Поке', icon: '/icons/Noodles.png', activeIcon: '/icons/noodles_active.png'},
+  {id: 3, title: 'Вок', icon: '/icons/wok.png', activeIcon: '/icons/wok_active.png'},
+  {id: 4, title: 'Суши', icon: '/icons/sushi.png', activeIcon: '/icons/sushi_active.png'},
+  {id: 5, title: 'Сеты', icon: '/icons/plate.png', activeIcon: '/icons/plate_active.png'},
+  {id: 6, title: 'Роллы', icon: '/icons/rolls.png', activeIcon: '/icons/rolls_active.png'},
+  {id: 7, title: 'Напитки', icon: '/icons/drinks.png', activeIcon: '/icons/drinks_active.png'},
+  {id: 8, title: 'Топпинги', icon: '/icons/toppings.png', activeIcon: '/icons/toppings_active.png'},
 ]
 
 export const rollsTypes = [
