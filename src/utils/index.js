@@ -4,18 +4,18 @@ import banner2 from '../images/banner-2.jpg'
 
 
 export const CategoriesList = [
-  {id: 1, title: 'Супы', icon: '/icons/soup.png', activeIcon: '/icons/soup_active.png'},
-  {id: 2, title: 'Поке', icon: '/icons/Noodles.png', activeIcon: '/icons/noodles_active.png'},
-  {id: 3, title: 'Вок', icon: '/icons/wok.png', activeIcon: '/icons/wok_active.png'},
-  {id: 4, title: 'Суши', icon: '/icons/sushi.png', activeIcon: '/icons/sushi_active.png'},
-  {id: 5, title: 'Сеты', icon: '/icons/plate.png', activeIcon: '/icons/plate_active.png'},
-  {id: 6, title: 'Роллы', icon: '/icons/rolls.png', activeIcon: '/icons/rolls_active.png'},
+  { id: 1, title: 'Супы', icon: '/icons/soup.png', activeIcon: '/icons/soup_active.png' },
+  { id: 2, title: 'Поке', icon: '/icons/Noodles.png', activeIcon: '/icons/noodles_active.png' },
+  { id: 3, title: 'Вок', icon: '/icons/wok.png', activeIcon: '/icons/wok_active.png' },
+  { id: 4, title: 'Суши', icon: '/icons/sushi.png', activeIcon: '/icons/sushi_active.png' },
+  { id: 5, title: 'Сеты', icon: '/icons/plate.png', activeIcon: '/icons/plate_active.png' },
+  { id: 6, title: 'Роллы', icon: '/icons/rolls.png', activeIcon: '/icons/rolls_active.png' },
 ]
 
 export const rollsTypes = [
-  {id: 1, title: 'Классические роллы', icon: '/icons/rolls.png', activeIcon: '/icons/rolls_active.png'},
-  {id: 2, title: 'Запеченные роллы', icon: '/icons/rolls.png', activeIcon: '/icons/rolls_active.png'},
-  {id: 3, title: 'Жаренные роллы', icon: '/icons/rolls.png', activeIcon: '/icons/rolls_active.png'},
+  { id: 1, title: 'Классические роллы', icon: '/icons/rolls.png', activeIcon: '/icons/rolls_active.png' },
+  { id: 2, title: 'Запеченные роллы', icon: '/icons/rolls.png', activeIcon: '/icons/rolls_active.png' },
+  { id: 3, title: 'Жаренные роллы', icon: '/icons/rolls.png', activeIcon: '/icons/rolls_active.png' },
 ]
 
 export const NavList = [
@@ -46,7 +46,7 @@ export const slidelist = [
     id: 1,
     img: banner1,
     text: 'Мы считаем, что то, как вы выглядите, и то, как вы себя чувствуете, неразрывно связано. Вот почему мы берем лучшее из науки и природы, чтобы создавать косметические продукты, персонализированные специально для вас!',
-    title: 'Закажите нашими вкусными блюдами на сумму 999 рублей и получите в подарок утонченные калифорния роллы!',
+    title: 'Закажите наши вкусные блюда на сумму 999 рублей и получите в подарок утонченные калифорния роллы!',
     backgroundColor: '#F6EEE8',
     color: '#a0663a',
   },
